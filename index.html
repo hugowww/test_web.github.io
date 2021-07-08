@@ -2,30 +2,31 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>你好，GitHub</title>
 </head>
 
 <body>
-    <script type="text/javascript">
-    var url = 'https://script.google.com/macros/s/AKfycbwoGIJ2fxg1BTwrm8jXGRNxy9qOhteKYfYlWGP9OPqJiWtb2QEWSaM0SO6qe4nsNzQ5Pg/exec'
+    <script type='text/javascript'>
+    var url = 'https://script.google.com/macros/s/AKfycbxHkV0tZlrYxcMnXJJt9aIfKYzoVpwW5wf5hsnpRNmbb3KCycsd-tabG8bShx2IykO6YA/exec'
     fetch(url, {
         method: 'POST',
-        body: {
-            "order_time": 'a',
-            "order_no": 'a',
-            "order_name": 'a',
-            "order_phone": 'a',
-            "order_address": 'a',
-            "order_ps": 'a'
-        },
+        followAllRedirects: true,
+        body: JSON.stringify({
+            'order_time': 'order_time',
+            'order_no': 'order_no',
+            'order_name': 'order_name',
+            'order_phone': 'order_phone',
+            'order_address': 'order_address',
+            'order_ps': 'order_ps'
+        }),
         headers: {
             'Content-Type': 'text/plain;charset=utf-8',
         }
     }).then(response => {
-        console.log("success:", response);
+        console.log('success:', response);
     }).catch(err => {
-        console.log("Error:" + err);
+        console.log('Error:' + err);
     });
     </script>
 </body>
