@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>你好，GitHub</title>
-  </head>
-  <body>
-    <h1>覺得厲害</h1>
-  </body>
-</html>
+</head>
 
+<body>
+    <script type="text/javascript">
+    var url = 'https://script.google.com/macros/s/AKfycbwbHfQia17kQslHNzb7aCOp-WDVVjUeXOM_gToijRnxxRCaPBu2IaQ1YFGdq4iAj3nxzQ/exec'
+    fetch(url, {
+        method: 'POST',
+        body: {
+            "order_time": 'a',
+            "order_no": 'a',
+            "order_name": 'a',
+            "order_phone": 'a',
+            "order_address": 'a',
+            "order_ps": 'a'
+        },
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+        }
+    }).then(response => {
+        console.log("success:", response);
+    }).catch(err => {
+        console.log("Error:" + err);
+    });
+    </script>
+</body>
+
+</html>
